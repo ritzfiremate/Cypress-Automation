@@ -23,3 +23,12 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+//Custom command for login
+Cypress.Commands.add('login', (username, password) => 
+{
+    cy.visit("https://test.beta.firemate.dev/")
+    cy.get('#username').type(username)
+    cy.get('#password').type(password)
+    cy.get('#login').click()
+})

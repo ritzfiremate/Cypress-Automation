@@ -3,7 +3,6 @@ import CreateJobPage from '../../PageObjects/CreateJobPage';
 import JobDetailsPage from '../../PageObjects/JobDetailsPage';
 
 
-
 describe('Jobs Testcases', () => {
 
     const HomePageObj = new HomePage();
