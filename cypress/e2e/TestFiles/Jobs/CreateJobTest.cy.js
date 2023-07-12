@@ -1,6 +1,6 @@
-import HomePage from '../../PageObjects/HomePage';
-import CreateJobPage from '../../PageObjects/CreateJobPage';
-import JobDetailsPage from '../../PageObjects/JobDetailsPage';
+import { HomePage } from "../../../PageObjects/HomePage/HomePage"
+import { CreateJobPage } from "../../../PageObjects/Job/CreateJobPage" 
+import { JobDetailsPage } from "../../../PageObjects/Job/JobDetailsPage" 
 
 
 describe('Jobs Testcases', () => {
@@ -11,15 +11,15 @@ describe('Jobs Testcases', () => {
 
     it('Verify Create Job', () => {
         cy.login();
-        HomePageObj.ClickCreateDrowndown();
-        HomePageObj.ClickCreateJobs();
-        CreateJobPageObj.ClickPropertyDropDown();
-        CreateJobPageObj.EnterPropertyNameInFilter('brisbane city hall');
-        CreateJobPageObj.EnterJobOrderReference('12345');
-        CreateJobPageObj.EnterClientRequest('testing');
-        CreateJobPageObj.ClickOnCreateJobButton();
-        JobDetailsPageObj.GetJobTitle().should('be.visible');
-        JobDetailsPageObj.GetJobTitle().should('have.text', 'Job at Brisbane City Hall')       
+        HomePageObj.clickCreateDrowndown();
+        HomePageObj.clickCreateJobs();
+        CreateJobPageObj.clickPropertyDropDown();
+        CreateJobPageObj.enterPropertyNameInFilter('brisbane city hall');
+        CreateJobPageObj.enterJobOrderReference('12345');
+        CreateJobPageObj.enterClientRequest('testing');
+        CreateJobPageObj.clickOnCreateJobButton();
+        JobDetailsPageObj.getJobTitle().should('be.visible');
+        JobDetailsPageObj.getJobTitle().should('have.text', 'Job at Brisbane City Hall')       
 
     })
 })

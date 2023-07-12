@@ -1,6 +1,6 @@
-import HomePage from "../../PageObjects/HomePage";
-import CreateQuotePage from "../../PageObjects/CreateQuotePage";
-import QuoteDetailsPage from "../../PageObjects/QuoteDetailsPage";
+import { HomePage } from "../../../PageObjects/HomePage/HomePage"
+import { CreateQuotePage } from "../../../PageObjects/Quote/CreateQuotePage" 
+import { QuoteDetailsPage } from "../../../PageObjects/Quote/QuoteDetailsPage" 
 
 describe('Quotes Testcases', () => {
 
@@ -11,20 +11,19 @@ describe('Quotes Testcases', () => {
     it('Verify Create New Quote', () => {
         
         cy.login();
-        HomePageObj.ClickCreateDrowndown();
-        HomePageObj.ClickCreateQuote();
-        CreateQuoteObj.ClickBEDropDown();
-        CreateQuoteObj.SelectBEFromList('FireMe');
-        CreateQuoteObj.ClickCustomerDropDown();
-        CreateQuoteObj.EnterCustomerNameInFilter('Brisbane city hall');
-        CreateQuoteObj.ClickPropertyDropDown();
-        CreateQuoteObj.EnterPropertyNameInFilter('Brisbane city hall');
-        CreateQuoteObj.ClickOnCreateQuoteButton();
-        QuoteDetailsPageObj.GetPropertyName().should('be.visible');
-        QuoteDetailsPageObj.GetPropertyName().should('have.text', 'Brisbane City Hall'); 
+        HomePageObj.clickCreateDrowndown();
+        HomePageObj.clickCreateQuote();
+        CreateQuoteObj.clickBEDropDown();
+        CreateQuoteObj.selectBEFromList('FireMe');
+        CreateQuoteObj.clickCustomerDropDown();
+        CreateQuoteObj.enterCustomerNameInFilter('Brisbane city hall');
+        CreateQuoteObj.clickPropertyDropDown();
+        CreateQuoteObj.enterPropertyNameInFilter('Brisbane city hall');
+        CreateQuoteObj.clickOnCreateQuoteButton();
+        QuoteDetailsPageObj.getPropertyName().should('be.visible');
+        QuoteDetailsPageObj.getPropertyName().should('have.text', 'Brisbane City Hall'); 
         cy.logout();       
                  
-    })
-   
+    })   
     
 })

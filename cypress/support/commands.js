@@ -32,3 +32,19 @@ Cypress.Commands.add('login', (username, password) =>
     cy.get('#password').type(password)
     cy.get('#login').click()
 })
+
+
+Cypress.Commands.add('login', ()=> {
+    cy.visit('https://test.beta.firemate.dev/Auth/Login?ReturnUrl=%2F')
+    cy.get('#username').clear()
+    cy.get('#username').type('Firemate')
+    cy.get('#password').clear()
+    cy.get('#password').type('firemaIwasonly19')
+    cy.get('#login').click()
+})
+
+Cypress.Commands.add('logout', ()=> {
+    cy.get('#usermenu').click()
+    cy.get('#logout-menu-item').click()
+
+  })
