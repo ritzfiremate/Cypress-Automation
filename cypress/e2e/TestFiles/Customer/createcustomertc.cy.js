@@ -8,8 +8,8 @@ describe('CreateCustomerValidation', () =>
 {
     it ('Create Customer', () =>
      {
-        cy.login('firemate', 'firemaIwasonly19')
-        homePage.ClickCreateDrowndown()
+        cy.login()
+        homePage.clickCreateDropdown()
         homePage.clickCreateCustomer()
         //createCustomer.selectCustomerFromDropdown()
         createCustomer.enterCustomerDetails('FireMe', 'Pokemon1', 'PM-6678', 7886, 'abs@poke.com')
@@ -19,7 +19,7 @@ describe('CreateCustomerValidation', () =>
 
     it('MandatoryCustomerName', () => 
     {
-        cy.login('firemate', 'firemaIwasonly19')
+        cy.login()
         homePage.ClickCreateDrowndown()
         homePage.clickCreateCustomer()
         //createCustomer.selectCustomerFromDropdown()
@@ -30,7 +30,7 @@ describe('CreateCustomerValidation', () =>
 
     it('MandatoryBEChargingEntity', () => 
     {
-        cy.login('firemate', 'firemaIwasonly19')
+        cy.login()
         homePage.ClickCreateDrowndown()
         homePage.clickCreateCustomer()
         //createCustomer.selectCustomerFromDropdown()
@@ -42,7 +42,7 @@ describe('CreateCustomerValidation', () =>
 
     it('ClickCancel', () =>
     {
-        cy.login('firemate', 'firemaIwasonly19')
+        cy.login()
         homePage.ClickCreateDrowndown()
         homePage.clickCreateCustomer()
         //createCustomer.selectCustomerFromDropdown()

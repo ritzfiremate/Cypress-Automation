@@ -1,0 +1,8 @@
+{
+    "customerName" : "Pokemon",
+    "contractName" : "pi25",
+    "contractType" : "Conditional",
+    "package" : "Gold",
+    "contractRenewalType" : "Manual",
+    "duration" : "24"
+}
